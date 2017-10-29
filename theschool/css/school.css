@@ -1,0 +1,51 @@
+
+img{
+   width: 10%; 
+
+}
+#userImg{
+    width: 4%;
+    margin-top: 22px;
+}
+    p{
+         direction: rtl;
+         margin-top: 0;
+        
+     }
+     #schoolLink{
+         text-decoration: none;
+         font-size: 30px;
+         font-family: sans-serif;
+      
+         
+     }
+     #AdminiLink{
+         text-decoration: none;
+         font-size: 30px;
+         font-family: sans-serif;
+     }
+     #curses{
+        margin-right: 85%;
+     }
+
+        #user{
+         direction: rtl;
+         margin-top: -90px;
+        
+     }
+     #formWelcome{
+         text-align: center;
+     }
+#line{
+    border-top-style: solid;
+    width: 100%;
+    height: 2px;
+    padding-top: 30px;
+}
+
+#MainContainer{
+    margin-left: 60%;
+}
+#MainContain,#Course{
+    margin-left: 50%;
+}

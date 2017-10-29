@@ -1,0 +1,34 @@
+<html>
+
+  <head>
+    <script src="../js/Course.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/school.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  </head>
+<body>
+<script src="../js/Course.js"></script>
+  <img src="../img/John_bryce_logo.jpg">
+  <a href="school.html">|  school |</a>
+  <a href="https://github.com/kob-e"> Administration |</a>
+  <p>dani livshiz, Manager<img src=""><a href="https://github.com/kob-e">logout</a>
+
+    <p id="Curses">
+      <i class="fa fa-plus-square-o" ></i>
+     Students 
+      <i class="fa fa-plus-square-o" onclick="editCurse()"></i>
+<input value=" Course" type="button" onclick="showCourse(this.value)" value="select"> 
+  
+</p>
+
+<div id="Course"></div>
+<div id="MainContainer">
+
+  students number:
+  <br> curses number:
+  <br><input value='save' type='button' onclick="loadDoc('../server/addCourse.php?name='+$('name').value+'&description='+$('description').value ,addCourse)">
+</div>
+
+</body>
+
+</html>
