@@ -10,23 +10,26 @@
 <script src="../js/Course.js"></script>
   <img src="../img/John_bryce_logo.jpg">
   <a href="school.html">|  school |</a>
-  <a href="https://github.com/kob-e"> Administration |</a>
+  <a href="Administration.html"> Administration |</a>
   <p>dani livshiz, Manager<img src=""><a href="https://github.com/kob-e">logout</a>
-
+<div id="line"></div>
     <p id="Curses">
-      <i class="fa fa-plus-square-o" ></i>
-     Students 
+      <i class="fa fa-plus-square-o" onclick="editStudent()"></i>
+      <input value=" Students" type="button" onclick="showStudent(this.value)" value="select"> 
+      
       <i class="fa fa-plus-square-o" onclick="editCurse()"></i>
 <input value=" Course" type="button" onclick="showCourse(this.value)" value="select"> 
   
 </p>
 
 <div id="Course"></div>
+<div id="Student"></div>
 <div id="MainContainer">
 
   students number:
   <br> curses number:
-  <br><input value='save' type='button' onclick="loadDoc('../server/addCourse.php?name='+$('name').value+'&description='+$('description').value ,addCourse)">
+  <br><input value='save course' type='button' onclick="loadDoc('../server/addCourse.php?name='+$('name').value+'&description='+$('description').value ,addCourse)">
+  <br><input value='save student' type='button' onclick="loadDoc('../server/addStudent.php?name='+$('name').value+'&phone='+$('phone').value+'&email='+$('email').value ,addStudent)">
 </div>
 
 </body>

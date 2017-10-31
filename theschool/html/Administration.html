@@ -1,0 +1,42 @@
+<html>
+
+<head>
+
+    <link rel="stylesheet" type="text/css" href="../css/school.css">
+    <script src="../js/Course.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+
+<body>
+    <script src="../js/Course.js"></script>
+    <img src="../img/John_bryce_logo.jpg">
+    <a id="schoolLink" href="school.html">| school |</a>
+    <a id="AdminiLink" href="Administration.html">  Administration |</a>
+    <p id="user">dani livshiz, Manager<img id="userImg" src="../img/29784400.jpg">
+        <a href="https://www.google.co.il">logout</a>
+        <br>
+        <div id="line"></div>
+        <label>Administrator id:  </label>
+        <input value='delete Administrator' type='button' onclick="loadDoc('../server/deleteAdministrator.php?id='+$('id').value, deleteAdministrator)">
+            <br>
+            <input type="number" name="id" id="id">
+            <br>
+        <input value="Administrators" type="button" onclick="updateAdministrators(this.value)" value="select">
+<i class="fa fa-plus-square-o" onclick="editAdministrators()"></i>
+<div id="MainContainer">
+    <input value='save Administrator' type='button' onclick="loadDoc('../server/addAdministrator.php?name='+$('name').value+'&phone='+$('phone').value+'&email='+$('email').value+'&role='+$('role').value ,addAdministrator)">
+<div id="Administrator"></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

@@ -18,15 +18,6 @@ while($row= $stmt->fetch())
                             </tr>";
                             }
                 echo "</table>";
-$stmt=$pdo->query('SELECT COUNT (idstudent) FROM student' );
-while($row= $stmt->fetch())
-{
-                 echo     "<tr>
-                                <td style='border: 1px solid black;text-align: center;'>" . $row["idstudent"] . "</td>
-                                
-                               
-                            </tr>";
-                            }
 
 
 ?>

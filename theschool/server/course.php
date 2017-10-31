@@ -2,10 +2,10 @@
     require_once 'connectionMysql.php';
     $con1 = new Connection();
     $results = $con1->select('course');
-     $results2 = $con1->select COUNT ('idstudent') FROM ('student') ;
+     $results2 = $con1->select('student');
     $resultsCount = $results->rowCount();
     $resultsCount2 = $results2->rowCount();
-      
+        
         
     $i = 0;
     echo "[";
@@ -34,7 +34,7 @@
     }
 
     echo "]";
-/*
+
 
  $i = 0;
     echo "[";
@@ -60,6 +60,5 @@
         $i++;
     }
 
-    echo "]";*/
-   
+    echo "]";
 ?>
