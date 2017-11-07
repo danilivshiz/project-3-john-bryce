@@ -1,26 +1,37 @@
 <html>
-  <head>
-     <link rel="stylesheet" type="text/css" href="../css/school.css">
 
-  </head>
-   <img src="../img/John_bryce_logo.jpg" > 
-  <a id="schoolLink" href="school.html">| school |</a>
-  <a id="AdminiLink" href="Administration.html">  Administration |</a>
-  <p id="user">dani livshiz, Manager<img id="userImg" src="../img/29784400.jpg">
-  <a href="https://www.google.co.il">logout</a>
-  <br>
-   <div id="line"></div>
-   <form id="formWelcome" method="GET" action="school.html">
-      <label>Username</label>
-       <input type="email" >
-       <br><br>
-       <label>Password  </label>
-       <input type="password">
- <br><br>
-       <input type="submit" value="Login">
+<head>
+      <link rel="stylesheet" type="text/css" href="../css/school.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-  
-   </form>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+      <script src="../js/Course.js"></script>
+      <div id='nav'>
+            <img src="../img/John_bryce_logo.jpg">
+            <a id="schoolLink" onclick="enterPassword()">| school |</a>
+            <a id="AdminiLink" onclick="enterPassword()"> Administration |</a>
+<p id="user">dani livshiz, Manager<img id="userImg" src="../img/29784400.jpg">
+      <a href="https://www.google.co.il">logout</a>
+      </div>
+
+      <div id="line"></div>
+      <form id="formWelcome" onsubmit="return CheckUsername()" method="POST" action="school.html" >
+            <label>Username</label>
+            <input type="email" id="username" name="username">
+            <br><br>
+            <label>Password  </label>
+            <input type="password" id="password" name="password">
+            <br><br>
+            <input type="submit" value="Login">
+
+
+      </form>
 
 
 
@@ -29,6 +40,6 @@
 
 
 
+      </body>
 
-
-</html>
+      </html>

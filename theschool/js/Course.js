@@ -4,7 +4,7 @@ function $(id) {
 function editCurse() {
   var MainContain = document.createElement("div");
   // נתינת id 
-  MainContain.id = "MainContain";
+  MainContain.id = "MainContainNew";
 MainContain.innerHTML = "name<input id='name'><br>Description<input id='description' ><br>"+
 "<a href='https://www.w3schools.com/css/img_fjords.jpg'>image</a>"
   document.body.appendChild(MainContain);
@@ -13,8 +13,16 @@ MainContain.innerHTML = "name<input id='name'><br>Description<input id='descript
 function editStudent() {
   var MainContain = document.createElement("div");
   // נתינת id 
-  MainContain.id = "MainContain";
+  MainContain.id = "MainContainNew2";
 MainContain.innerHTML = "name<input id='name'><br>Phone<input id='phone' ><br>Email<input id='email' >"+
+"<a href='https://www.w3schools.com/css/img_fjords.jpg'>image</a>"
+  document.body.appendChild(MainContain);
+}
+function editStudentAndDelete() {
+  var MainContain = document.createElement("div");
+  // נתינת id 
+  MainContain.id = "MainContainNew2";
+MainContain.innerHTML = "<input type='number' name='id' id='id'><br>name<input id='name'><br>Phone<input id='phone' ><br>Email<input id='email' >"+
 "<a href='https://www.w3schools.com/css/img_fjords.jpg'>image</a>"
   document.body.appendChild(MainContain);
 }
@@ -22,10 +30,15 @@ MainContain.innerHTML = "name<input id='name'><br>Phone<input id='phone' ><br>Em
 function editAdministrators() {
   var MainContain = document.createElement("div");
   // נתינת id 
-  MainContain.id = "MainContain";
+  MainContain.id = "MainContainNew3";
 MainContain.innerHTML = "name<input id='name'><br>Phone<input id='phone' ><br>Email<input id='email' ><br>Role<input id='role'>"+
 "<br><a href='https://www.w3schools.com/css/img_fjords.jpg'>image</a>"
   document.body.appendChild(MainContain);
+}
+
+function permissionDelete(){
+  alert('warning:You are deleting a student');
+  loadDoc('../server/deleteStudent.php?id='+$('id').value, deleteStudent);
 }
 
 function loadDoc(url, functionReponse) {
@@ -55,6 +68,12 @@ function getStudent() {
 function deleteAdministrator() {
   if (this.readyState == 4 && this.status == 200) {
     $("Administrator").innerHTML = this.responseText;
+  }
+}
+
+function deleteStudent(){
+  if (this.readyState == 4 && this.status == 200) {
+    $("Student").innerHTML = this.responseText;
   }
 }
 
@@ -122,15 +141,36 @@ function updateAdministrators(str) {
   xhttp.open("GET", "../server/updateAdministrator.php?"+str, true);
   xhttp.send();   
 }
-/*
-function ViewCourseDetails() {
-  var CourseDetails = document.createElement("div");
-  // נתינת id 
-  CourseDetails.id = "CourseDetails";
+
+function enterPassword(){
+  alert('enter password');
+}
+
+function CheckUsername()
+ {
+ 
+ 
+ var p = document.getElementById("password").value;
+ var n = document.getElementById("username").value;
+ if (n != "dani@liv" )
+ {
+  alert("enter correct email");
   
-  CourseDetails.innerHTML ="Course";
+ }
+ if (p != 1234)
+ {
+  alert("enter correct password");
+  
+ }
 
-
-  document.body.appendChild(CourseDetails);
-
-}*/
+ 
+ } 
+function  CheckAdministrator(){
+ 
+ if (document.getElementById("username").value != "Admin@Admin" )
+ {
+  alert("enter correct email Administrator");
+  return false;
+ }
+}
+ 

@@ -1,35 +1,51 @@
 <html>
 
-  <head>
-    <script src="../js/Course.js"></script>
-    <link rel="stylesheet" type="text/css" href="../css/school.css">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-  </head>
-<body>
-<script src="../js/Course.js"></script>
-  <img src="../img/John_bryce_logo.jpg">
-  <a href="school.html">|  school |</a>
-  <a href="Administration.html"> Administration |</a>
-  <p>dani livshiz, Manager<img src=""><a href="https://github.com/kob-e">logout</a>
-<div id="line"></div>
-    <p id="Curses">
-      <i class="fa fa-plus-square-o" onclick="editStudent()"></i>
-      <input value=" Students" type="button" onclick="showStudent(this.value)" value="select"> 
-      
-      <i class="fa fa-plus-square-o" onclick="editCurse()"></i>
-<input value=" Course" type="button" onclick="showCourse(this.value)" value="select"> 
+<head>
+  <script src="../js/Course.js"></script>
   
+  <link rel="stylesheet" type="text/css" href="../css/school.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+         <!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+
+<body>
+  
+  <script src="../js/Course.js"></script>
+  <div id='nav'>
+    <img src="../img/John_bryce_logo.jpg">
+    <a id="schoolLink" href="school.html">|  school |</a>
+    <a id="AdminiLink"  href="checkAdministration.html"> Administration |</a>
+
+    <p id="user">dani livshiz, Manager<img id="userImg" src="../img/29784400.jpg">
+      <a href="https://www.google.co.il">logout</a>
+  </div>
+  <div id="line"></div>
+  <div id="section">
+    <p id="Curses">
+     
+<input id="StudentsButton"  value=" Students" type="button" onclick="showStudent(this.value)" value="select">
+ <i class="fa fa-plus-square-o" onclick="editStudent()"></i>
+
+<input id="courseButton"  value=" Course" type="button" onclick="showCourse(this.value)" value="select">
+<i class="fa fa-plus-square-o" onclick="editCurse()"></i>
 </p>
 
-<div id="Course"></div>
-<div id="Student"></div>
+ 
+</div>
 <div id="MainContainer">
+ <input type="button" value="Edit student details" onclick="editStudentAndDelete()"> 
+ <input value='delete Student' type='button'  onclick="permissionDelete()">
+  <div id="Course"></div>
+  <div id="Student"></div>
 
-  students number:
-  <br> curses number:
+
   <br><input value='save course' type='button' onclick="loadDoc('../server/addCourse.php?name='+$('name').value+'&description='+$('description').value ,addCourse)">
-  <br><input value='save student' type='button' onclick="loadDoc('../server/addStudent.php?name='+$('name').value+'&phone='+$('phone').value+'&email='+$('email').value ,addStudent)">
+<br><input value='save student' type='button' onclick="loadDoc('../server/addStudent.php?name='+$('name').value+'&phone='+$('phone').value+'&email='+$('email').value ,addStudent)">
 </div>
 
 </body>
