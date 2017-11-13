@@ -2,6 +2,9 @@
     require_once 'connectionMysql.php';
     $con1 = new Connection();
     
+    /* $results = $con1->("SELECT * FROM administrator
+     where role='owner'");*/
+     
      $results = $con1->select('administrator');
     $resultsCount = $results->rowCount();
 
@@ -35,11 +38,11 @@
         echo '"';
         echo $row['role'];
         echo '"';
-        echo ",";
+        
 
         echo "}";
         if ($resultsCount -1> $i)
-            echo ",";
+            echo ",<br>";
         $i++;
     }
 

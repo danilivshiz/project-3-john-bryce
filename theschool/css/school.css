@@ -59,7 +59,7 @@ img{
 #MainContainer{
     width: 60%;
     background-color: lightgoldenrodyellow;
-    height: 300px;
+    height: 400px;
   float: right;
 }
 #MainContain,#Course{
@@ -74,7 +74,7 @@ img{
 }
 #section{
     background-color: lightskyblue;
-    height: 300px;
+    height: 400px;
     width: 40%;
     float: left;
 }
@@ -104,4 +104,11 @@ img{
 }
 #Administrator{
     background-color: sandybrown;
+    width: 44%;
+}
+
+#fotter{
+    margin-top: 50px;
+    background-color:mistyrose;
+    
 }

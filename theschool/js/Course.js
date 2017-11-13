@@ -173,4 +173,14 @@ function  CheckAdministrator(){
   return false;
  }
 }
+
+function  CheckOwner(){
+ 
+ if (document.getElementById("username2").value != "owner@owner" )
+ {
+  alert("enter correct email owner");
+  return false;
+ }
+}
+
  
