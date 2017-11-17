@@ -23,7 +23,8 @@ function editStudentAndDelete() {
   // נתינת id 
   MainContain.id = "MainContainNew2";
 MainContain.innerHTML = "<input type='number' name='id' id='id'><br>name<input id='name'><br>Phone<input id='phone' ><br>Email<input id='email' >"+
-"<a href='https://www.w3schools.com/css/img_fjords.jpg'>image</a>"
+"<a href='https://www.w3schools.com/css/img_fjords.jpg'>image</a>"+"<br><input type='checkbox'  value='course A'>Course A<br>"
++"<input type='checkbox'  value='course B'>Course B"+"<br><input type='checkbox'  value='course C'>Course C<br>";
   document.body.appendChild(MainContain);
 }
 
